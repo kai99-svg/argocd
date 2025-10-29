@@ -8,7 +8,7 @@ spec:
   
   source:
     repoURL: https://github.com/kai99-svg/aws.git
-    targetRevision: HEAD
+    targetRevision: main
     path: dev
     
   destination:
