@@ -2,7 +2,7 @@ apiVersion: argoproj-io/valpha1
 kind: application
 metadata:
   name: my-app-argocd
-  namspace: argocd
+  namespace: argocd
 spec:
   project: default
   source:
