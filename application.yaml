@@ -7,7 +7,7 @@ spec:
   project: default
   
   source:
-    repoURL: https://github.com/kai99-svg/aws.git
+    repoURL: https://github.com/kai99-svg/argocd.git
     targetRevision: main
     path: dev
     
