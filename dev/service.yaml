@@ -7,5 +7,5 @@ spec:
   selector:
     app: myapp
   ports:
-    - port: 8080
-      targetPort: 8080 ## this must match the pod open in deployment
+    - port: 443
+      targetPort: 443 ## this must match the pod open in deployment
