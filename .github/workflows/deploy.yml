@@ -28,4 +28,7 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: run kubectl apply the argocd yaml
-        run: kubectl apply -f application.yaml
+        run: |
+          kubectl create namespace argocd
+          kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
+          kubectl apply -f application.yaml
