@@ -1,0 +1,16 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: fluent-bit
+  namespace: argocd
+spec:
+  source:
+    repoURL: https://github.com/kai99-svg/argocd.git
+    path: monitoring/fluent-bit
+  destination:
+    namespace: amazon-cloudwatch
+    server: https://kubernetes.default.svc
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true

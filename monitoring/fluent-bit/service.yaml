@@ -1,0 +1,24 @@
+---
+# Source: aws-for-fluent-bit/templates/service.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    helm.sh/chart: aws-for-fluent-bit-0.1.35
+    app.kubernetes.io/name: aws-for-fluent-bit
+    app.kubernetes.io/instance: fluent-bit-aws-for-fluent-bit
+    app.kubernetes.io/version: "2.32.2.20240516"
+    app.kubernetes.io/managed-by: Helm
+  name: fluent-bit-aws-for-fluent-bit
+  namespace: amazon-cloudwatch
+spec:
+  ports:
+  - name: monitor-agent
+    port: 2020
+    protocol: TCP
+    targetPort: 2020
+  selector:
+    app.kubernetes.io/name: aws-for-fluent-bit
+    app.kubernetes.io/instance: fluent-bit-aws-for-fluent-bit
+  sessionAffinity: None
+  type: ClusterIP
