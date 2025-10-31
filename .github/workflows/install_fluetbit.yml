@@ -29,4 +29,5 @@ jobs:
       # Runs a single command using the runners shell
       - name: run kubectl apply the argocd yaml
         run: |
+          aws eks update-kubeconfig --region us-east-1 --name my-eks-cluster
           kubectl apply -f fluetbit.yaml
