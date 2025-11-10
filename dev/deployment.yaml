@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: myapp                  # Name of the container
-        image: 279205476473.dkr.ecr.us-east-1.amazonaws.com/myapp:2c78d84d946eaa8068dff52b892365bd3235af0e
+        image: kai554/test:v4
         ports:
           - containerPort: 443
 
