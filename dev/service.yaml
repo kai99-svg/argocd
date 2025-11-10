@@ -8,5 +8,5 @@ spec:
     app: myapp
   ports:
     - name: metrics      # <--- port name
-      port: 443          # <--- service port
-      targetPort: 443    # <--- pod container port
+      port: 8080          # <--- service port
+      targetPort: 8080    # <--- pod container port
