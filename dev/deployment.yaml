@@ -17,5 +17,5 @@ spec:
       - name: myapp                  # Name of the container
         image: kai554/test:v4
         ports:
-          - containerPort: 443
+          - containerPort: 8080
 
