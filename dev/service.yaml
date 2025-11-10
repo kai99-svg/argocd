@@ -7,6 +7,5 @@ spec:
   selector:
     app: myapp
   ports:
-    - name: metrics      # <--- port name
-      port: 8080          # <--- service port
+    - port: 8080          # <--- service port
       targetPort: 8080    # <--- pod container port
