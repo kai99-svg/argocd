@@ -3,8 +3,6 @@ kind: Service
 metadata:
   name: myapp
   namespace: myapp
-  labels: 
-    monitoring: enabled
 spec:
   selector:
     app: myapp
