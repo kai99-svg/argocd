@@ -34,7 +34,7 @@ data:
         Refresh_Interval  10
     [FILTER]
         Name                kubernetes
-        Match               kube.*,myapp.*
+        Match               kube.*
         Kube_URL            https://kubernetes.default.svc.cluster.local:443
         Merge_Log           On
         Merge_Log_Key       data
