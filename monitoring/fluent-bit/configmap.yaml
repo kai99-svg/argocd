@@ -40,6 +40,14 @@ data:
         Mem_Buf_Limit 5MB
         Skip_Long_Lines On
         Refresh_Interval 10
+    
+    [OUTPUT]
+        Name cloudwatch_logs
+        Match myapp
+        region us-east-1
+        log_group_name /aws/eks/fluentbit-cloudwatch/logs
+        log_stream_prefix myapp-
+        auto_create_group true
     [FILTER]
         Name                kubernetes
         Match               kube.*
