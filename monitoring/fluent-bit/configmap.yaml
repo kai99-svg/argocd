@@ -40,7 +40,7 @@ data:
         Merge_Log_Key       data
         Keep_Log            On
         K8S-Logging.Parser  On
-        K8S-Logging.Exclude On
+        K8S-Logging.Exclude Off
         Buffer_Size         32k
     [OUTPUT]
         Name                  cloudwatch_logs
