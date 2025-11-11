@@ -32,6 +32,14 @@ data:
         Mem_Buf_Limit     5MB
         Skip_Long_Lines   On
         Refresh_Interval  10
+    [INPUT]
+        Name              tail
+        Tag               myapp.*
+        Path              /var/log/containers/myapp-*.log
+        DB                /var/log/flb_myapp.db
+        Mem_Buf_Limit     5MB
+        Skip_Long_Lines   On
+        Refresh_Interval  10
     [FILTER]
         Name                kubernetes
         Match               kube.*
